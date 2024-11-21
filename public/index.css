@@ -1,0 +1,9 @@
+body {
+  margin: 20px;
+  color: red;
+}
+
+.avatar {
+  border: 5px solid black;
+  border-radius: 50%;
+}

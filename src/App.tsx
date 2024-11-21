@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import MyButton from './myButton';
 
-function LikeButton() {
-  const [liked, setLiked] = useState(false);
-  if (liked) return 'you liked this';
+function App() {
+  const [count, setCount] = useState(0);
 
-  return React.createElement(
-    'button',
-    { onClick: () => setLiked(true) },
-    'Like'
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <MyButton count={count} handleClick={handleClick} />
+      <MyButton count={count} handleClick={handleClick} />
+      <MyButton count={count} handleClick={handleClick} />
+    </div>
   );
 }
 
-export default LikeButton;
+export default App;
